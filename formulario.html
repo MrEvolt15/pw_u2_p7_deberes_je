@@ -31,11 +31,9 @@
             <hr>
 
             <ul>
-                <li v-for="(form, index) in formulario" :key="index">{{frase}}
-                    <p>Nombre: {{ form.nombre }}</p>
-                    <p>Apellido: {{ form.apellido }}</p>
-                    <p>Hobby: {{ form.hobby }}</p>
-                    <p>Lugar de Nacimiento: {{ form.lugarNacimiento }}</p>
+                <li v-for="{nombre,apellido,hobby,luegarNacimiento } in formulario" >
+                    <p>{{ nombre }}-{{ apellido }}-{{ hobby }}-{{ lugarNacimiento }}</p>
+                    
                 </li>
             </ul>
 
