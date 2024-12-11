@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <header></header>
+        <nav></nav>
+        <section>
+
+            <label for="idnombre">Nombre:</label>
+            <input v-model="nombre" id="idnombre" type="text">
+            <br>
+            <label for="idapellido">Apellido:</label>
+            <input v-model="apellido" id="idapellido" type="text">
+            <br>
+            <label for="idhobby">Hobby:</label>
+            <input v-model="hobby" id="idhobby" type="text">
+            <br>
+            <label for="idnacimiento">Lugar Nacimiento:</label>
+            <input v-model="lugarNacimiento" id="idnacimiento" type="text">
+            <br>
+            <button v-on:click="agregarFormulario">Guardar</button>
+
+            <hr>
+
+            <ul>
+                <li v-for="(form, index) in formulario" :key="index">{{frase}}
+                    <p>Nombre: {{ form.nombre }}</p>
+                    <p>Apellido: {{ form.apellido }}</p>
+                    <p>Hobby: {{ form.hobby }}</p>
+                    <p>Lugar de Nacimiento: {{ form.lugarNacimiento }}</p>
+                </li>
+            </ul>
+
+
+        </section>
+        <aside></aside>
+        <footer></footer>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</body>
+
+</html>
